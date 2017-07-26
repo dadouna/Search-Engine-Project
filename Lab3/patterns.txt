@@ -1,0 +1,51 @@
+//
+//  Information retrieval course
+//  First version: Johan Boye 2016
+//
+// In this file you can put your regular expressions
+// for matching non-standard words (like mail addresses).
+//
+// As you have probably already understood, lines beginning
+// with "//" are comments.
+
+// Twenty-four seven
+\d+/\d+
+
+// ADD YOUR PATTERNS HERE
+
+// Word-word (small letter only)
+[a-z]+\-[a-z]+
+
+// Email
+\w+.*@\w+[.\w]+
+
+// Acronym e.g.
+([a-z]\.){2}
+
+// —-
+\-{2}
+
+// 2.4.1
+(\d+\.)+\d+
+
+// http://
+// http[s]?:\/\/[\w+\W?]+
+http[s]?:\/{2}[^\s]+
+
+// Phone numbers
+(\d+\-)+\d+
+
+// + before phone numbers
+\+\d+
+
+// Numbers with decimals
+(\d+\,)+\d+
+
+// Numbers - xxxx
+\d+\-\w+
+
+// Apostrophe ’s and ’em (not allowing more letters than 1-2 after apostrophe)
+\w*\'\w{1,2}(?!\w+)
+
+// Clock
+(\d+\:)+\d+
